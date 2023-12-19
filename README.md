@@ -1,11 +1,43 @@
 # Cybersecurity in einer Web-Applikation
 
 ## Handlungsziel 1
-In der Insecure App können Nutzer ohne die nötigen Rechte zu besitzen alle Beiträge bearbeiten, sobald sie die ID eines Eintrages kennen. Der Nutzer kann zwar nicht direkt auf der Insecure App Seite die Daten verändern, aber ganz einfach mit Tools wie Swagger oder Postman. Auf diese Weise können die Rollen sehr einfach umgangen werden und könnten auch weggelassen werden, wenn dies nicht behoben wird. In der Theorie könnte ein Nutzer alle Beträge löschen und damit einen grossen Schaden anrichten.
+### Phishing
 
-![Code Beispiel](https://github.com/SpogotenauPOGGERS/JanVontobel_LB_183/assets/89130699/0ba7d5df-4d50-4df9-8e7d-37cd4d8ece18)
-In dieser Patchanfrage müsste zusätzlich noch überprüft werden, ob der Nutzer die nötige Berrechtigung dazu hat.
+Phishing ist eine betrügerische Technik, bei der versucht wird, durch das Vortäuschen vertrauenswürdiger Quellen sensible Informationen wie Passwörter oder Kreditkartendaten von ahnungslosen Personen zu stehlen.
 
+**Gegenmassnahmen**
+* Nicht auf Links oder Anhänge in verdächtigen Nachrichten klicken
+* Vorsichtiger Umgang mit E-Mails von unbekannten Absendern
+* Überprüfung von komischen Endungen der E-Mail Adresse
+
+### Ransomware
+
+Ransomware ist eine schädliche Software, die die Dateien eines Computers verschlüsselt und dann Lösegeld von ihrem Besitzer verlangt, um die Daten wieder freizugeben.
+
+**Gegenmassnahmen**
+* Betriebssysteme und Software auf dem neusten Stand halten.
+* Regelmässige Backups machen
+
+### Malware
+
+Malware ist schädliche Software, die entwickelt wurde, um deinem Computer oder Gerät zu schaden, Daten zu stehlen oder unerwünschte Aktionen auszuführen, ohne dass du es merkst.
+
+**Gegenmassnahmen**
+* Nur Dateien aus sicheren Quellen herunterladen
+* Betriebssyteme und Software auf dem neusten Stand halten.
+* Antivirenprogramm benutzen
+
+### DDoS-Angriffe
+
+DDoS (Distributed Denial of Service) ist eine Angriffsmethode, bei der eine Vielzahl von Computern gleichzeitig eine Website oder einen Dienst überlastet, um ihn unzugänglich zu machen.
+
+**Gegenmassnahmen**
+* Netzverkehr filtern
+* Gute Netzwerksicherheit und Überwachung verwenden
+
+### Kritische Beurteilung
+Ich denke, ich habe dieses Handlungsziel erreicht, da ich Bedrohungen und deren Gegenmassnahmen aufzeigen konnte.
+  
 ## Handlungsziel 2
 Durch SQL Injection kann man sehr einfach in der Insecure App sich als Administrator einloggen ohne das Nötige Passwort zu kennen. Mit den Eingaben des folgenden Bildes kann man sich als Administrator einloggen.
 
@@ -20,6 +52,9 @@ Wie folgt ändern um ihn vor SQL Injection zu schützen:
 ![Biespiel des überarbeiteten Codes](https://github.com/SpogotenauPOGGERS/JanVontobel_LB_183/assets/89130699/7d01d65c-0b08-4d67-a947-94b474344d4e)
 
 Vor der Änderung haben wir mit der Funktion "FromSqlRaw" gearbeitet, was gleich ist wie eine Abfrage in einer Datenbank umgebung, was daher sehr viele Möglichkeiten bietet und auch das Risiko damit erhöht.
+
+### Kritische Beurteilung
+Ich denke, ich habe dieses Handlungsziel erreicht, da ich anhand eines Beispiels SQL-Injection verhindern konnte in meinem Projekt.
 
 ## Handlungsziel 3
 
@@ -49,6 +84,9 @@ if (!_userService.IsAdmin() && _userService.GetUserId() != news.AuthorId)
 ```
 ![Autorisierung im Code](https://github.com/SpogotenauPOGGERS/JanVontobel_LB_183/assets/89130699/83a2eb5b-9239-4f58-8df2-c7c546152cd0)
 
+### Kritische Beurteilung
+Ich denke, ich habe dieses Handlungsziel erreicht, da ich erklärt habe wie Authentifizierung und Autorisierung und meiner Applikation funktioniert.
+
 ## Handlungsziel 4
 
 In den meisten Fällen, in denen Konten gehackt werden, liegt es nicht an Sicherheitslücken des Systems, sondern an den Menschen. Nutzt jemand das Passwort "Hallo123" ist dies nicht sehr sicher, da es ein sehr verbreitetes Passwort ist, nicht sehr lange ist und ebenfalls aus einem klaren Wort besteht. Stattdessen sollte man ein möglichst langes Passwort verwenden mit zufälligen Zeichenfolgen bestehend aus Kleinbuchstaben, Grossbuchstaben, Zahlen und Sonderzeichen. Jedes Passwort ist Knackbar, die Frage ist nur wie lange man dafür braucht.
@@ -57,6 +95,9 @@ In der Insecure App haben wir eine kleine Funktion erstellt, welche den Nutzer e
 ![Code der Passwortüberprüfung](https://github.com/SpogotenauPOGGERS/JanVontobel_LB_183/assets/89130699/4b99391e-895a-4fab-85ec-20a7c97b44dd)
 
 Ebenfalls sollte der Key für den JWT auch nicht in unserem öffentlichen Github Repository sichtbar sein, weshalb wir diesen im Secret Manager-Tool von ASP.NET ablegen sollten. diese Files werden nicht in das Repository geladen. In unserem veröffentlichten Code steht nur eine Referenz zu diesem Secret, womit aussenstehnde aber nichts anfangen Können. Dies Funktioniert nach dem gleichen prinzip wie die ".env" Files.
+
+### Kritische Beurteilung
+Ich denke, ich habe dieses Handlungsziel erreicht, da ich aufgezeigt habe wie in meiner Applikation überprüft wird, wie sicher das Passwort ist.
 
 ## Handlungsziel 5
 
@@ -70,3 +111,6 @@ Diese Logs werden demnach ausgegeben bei einer Fehlversuch und einem Erfolgreich
 ![Fehlversuch beim Login](https://github.com/SpogotenauPOGGERS/JanVontobel_LB_183/assets/89130699/34696ae1-9962-4d12-bbf5-28e591a8799d)
 
 ![Erfolgreiches Login](https://github.com/SpogotenauPOGGERS/JanVontobel_LB_183/assets/89130699/0cac6c14-0ef8-425c-8a2a-759a43a59686)
+
+### Kritische Beurteilung
+Ich denke, ich habe dieses Handlungsziel erreicht, da ich aufzeige wo in meinem Programm Logs augegeben werden und weshalb man diese verwendet.
