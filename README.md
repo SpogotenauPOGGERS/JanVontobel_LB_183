@@ -59,3 +59,14 @@ In der Insecure App haben wir eine kleine Funktion erstellt, welche den Nutzer e
 Ebenfalls sollte der Key für den JWT auch nicht in unserem öffentlichen Github Repository sichtbar sein, weshalb wir diesen im Secret Manager-Tool von ASP.NET ablegen sollten. diese Files werden nicht in das Repository geladen. In unserem veröffentlichten Code steht nur eine Referenz zu diesem Secret, womit aussenstehnde aber nichts anfangen Können. Dies Funktioniert nach dem gleichen prinzip wie die ".env" Files.
 
 ## Handlungsziel 5
+
+Durch das Hinzufügen von Logging-Nachrichten können Entwickler und Administratoren essenzielle Ereignisse in der Anwendung überwachen. Diese Protokolle sind besonders nützlich beim Debuggen, der Überwachung der Anwendungsleistung und der Identifizierung von Problemen oder Sicherheitsvorfällen. Sie bieten Einblicke in das Geschehen der Anwendung und erleichtern das Tracking von Aktivitäten im System.
+In der Insecure App haben wir zum Beispiel Logs erstellt beim Login, wenn es ein Fehler gibt beim Login, aber auch wenn sich ein Nutzer erfolgreich eingeloggt hat.
+
+![Logging im Code](https://github.com/SpogotenauPOGGERS/JanVontobel_LB_183/assets/89130699/2189b08d-c8c5-4118-a119-67b892411939)
+
+Diese Logs werden demnach ausgegeben bei einer Fehlversuch und einem Erfolgreichen Login ausgegeben in der Konsole
+
+![Fehlversuch beim Login](https://github.com/SpogotenauPOGGERS/JanVontobel_LB_183/assets/89130699/34696ae1-9962-4d12-bbf5-28e591a8799d)
+
+![Erfolgreiches Login](https://github.com/SpogotenauPOGGERS/JanVontobel_LB_183/assets/89130699/0cac6c14-0ef8-425c-8a2a-759a43a59686)
