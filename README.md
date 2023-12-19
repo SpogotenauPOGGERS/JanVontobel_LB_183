@@ -1,4 +1,6 @@
 # Cybersecurity in einer Web-Applikation
+## Einführung
+In diesem Portfoliobeitrag schreibe ich über Sicherheitsmassnahmen in einer Web-Applikation. Ich zeige verschiedene konzepte auf und zeige auch Beispiele aus Sicht eines Angreifers wie Lücken im Programm genutzt werden können um Unfug zu treiben. Natürlich werden dazu auch Methoden gezeigt um diese Lücken zu schliessen. Der ganze Beitrag ist in 5 Abschnitte aufgeteilt und beschäftigt sich jeweils mit einem bestimmten Thema. 
 
 ## Handlungsziel 1
 ### Phishing
@@ -114,3 +116,6 @@ Diese Logs werden demnach ausgegeben bei einer Fehlversuch und einem Erfolgreich
 
 ### Kritische Beurteilung
 Ich denke, ich habe dieses Handlungsziel erreicht, da ich aufzeige wo in meinem Programm Logs augegeben werden und weshalb man diese verwendet.
+
+## Selbsteinschätzung
+Ich habe das Gefühl, dass ich mit diesem Beitrag eine gute Arbeit geleistet habe und mein gelerntes Wissen gut aufzeigen konnte. Auch meine Leistung während des Modules schätze ich als gut ein, da ich zu fast jedem Zeitpunkt verstanden habe was ich bearbeite und das ohne grosse Schwierigkeiten. 
