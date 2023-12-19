@@ -1,4 +1,4 @@
-# LB_183_Portfolio_VontobelJan
+# Cybersecurity in einer Web-Applikation
 
 ## Handlungsziel 1
 In der Insecure App können Nutzer ohne die nötigen Rechte zu besitzen alle Beiträge bearbeiten, sobald sie die ID eines Eintrages kennen. Der Nutzer kann zwar nicht direkt auf der Insecure App Seite die Daten verändern, aber ganz einfach mit Tools wie Swagger oder Postman. Auf diese Weise können die Rollen sehr einfach umgangen werden und könnten auch weggelassen werden, wenn dies nicht behoben wird. In der Theorie könnte ein Nutzer alle Beträge löschen und damit einen grossen Schaden anrichten.
