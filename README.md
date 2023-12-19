@@ -39,7 +39,7 @@ Möchte ein Nutzer die 2FA bei sich einrichten, so muss er zu "Enable 2FA" navig
 
 ### Implementierte Autorisierung
 
-In der Insecure App wird die Autorisierung mit 2 Rollen geregelt, zum einen der Admin, der alles machen darf und dem User, der nurz begrenzte Möglichkeiten besitzt. So wird zum Beispiel im folgenden Beispiel bei der Löschung eines Eintrages überprüft, ob ein Admin den Eintrag löschen möchte oder der Autor des Eintrages selbst. Ist es keiner der beiden Fällen ist es dem Nutzer nicht erlaubt diese Aktion zu vollstrecken. 
+In der Insecure App wird die Autorisierung mit 2 Rollen geregelt, zum einen der Admin, der alles machen darf und dem User, der nur begrenzte Möglichkeiten besitzt. So wird zum Beispiel im folgenden Beispiel bei der Löschung eines Eintrages überprüft, ob ein Admin den Eintrag löschen möchte oder der Autor des Eintrages selbst. Ist es keiner der beiden Fällen ist es dem Nutzer nicht erlaubt diese Aktion zu vollstrecken. 
 
 ```C#
 if (!_userService.IsAdmin() && _userService.GetUserId() != news.AuthorId)
